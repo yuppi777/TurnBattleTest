@@ -8,10 +8,12 @@ public class UICommand : MonoBehaviour
 
     [SerializeField]
     PlayerParametorMaster _playerParametorMaster;
+    [SerializeField]
+    MyEnemy _myEnemy;
 
     public void AttackSelected()
     {
-        SelectedCommand = new CommandAttak();
+        SelectedCommand = new CommandAttak(_myEnemy,_playerParametorMaster);
     }
     public void HealSeleceted()
     {

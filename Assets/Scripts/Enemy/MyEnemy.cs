@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MyEnemy : MonoBehaviour
 {
     public string MyName => _myName;
     [SerializeField]
     private string _myName;
-    [SerializeField]private int EnemyHp;
+    [SerializeField]
+    public int EnemyHp;
+    [SerializeField]
+    private Text EnemyHpText;
 
     private void Update()
     {
@@ -15,5 +19,6 @@ public class MyEnemy : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        EnemyHpText.text = "HP"+ EnemyHp.ToString();
     }
 }

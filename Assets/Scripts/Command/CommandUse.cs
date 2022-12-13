@@ -5,6 +5,7 @@ using UnityEngine;
 public class CommandUse : MonoBehaviour
 {
    [SerializeField] PlayerParametorMaster _playerParametorMaster;
+    [SerializeField] MyEnemy _myEnemy;
     public enum Command
     {
         Attack,
@@ -17,13 +18,13 @@ public class CommandUse : MonoBehaviour
         switch (SelectCommand)
         {
             case Command.Attack:
-                command = new CommandAttak();
+                command = new CommandAttak(_myEnemy,_playerParametorMaster);
                 break;
             case Command.Heal:
                 command = new CommandHeal(_playerParametorMaster);
                 break;
             default:
-                command = new CommandAttak();
+                command = new CommandAttak(_myEnemy,_playerParametorMaster);
                 break;
                
         }
