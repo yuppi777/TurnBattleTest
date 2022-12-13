@@ -5,6 +5,7 @@ using UnityEngine;
 public class CommandUse : MonoBehaviour
 {
    [SerializeField] PlayerParametorMaster _playerParametorMaster;
+    [SerializeField] PlayerParametorMaster _buttleplayerParametorMaster;
     [SerializeField] MyEnemy _myEnemy;
     public enum Command
     {

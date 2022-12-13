@@ -7,23 +7,28 @@ public class UICommand : MonoBehaviour
     private ICommand SelectedCommand;
 
     [SerializeField]
-    PlayerParametorMaster _playerParametorMaster;
+    PlayerParametorMaster _playerParametorMaster;//普遍的であるプレイヤーのステータス
+    [SerializeField] 
+    PlayerParametorMaster _buttleplayerParametorMaster;//バトル中のコマンドによって変わるステータス
     [SerializeField]
     MyEnemy _myEnemy;
-
+    private void Start()
+    {
+        Initialization();
+    }
     public void AttackSelected()
     {
-        SelectedCommand = new CommandAttak(_myEnemy,_playerParametorMaster);
+        SelectedCommand = new CommandAttak(_myEnemy,_buttleplayerParametorMaster);
     }
     public void HealSeleceted()
     {
-        SelectedCommand = new CommandHeal(_playerParametorMaster);
+        SelectedCommand = new CommandHeal(_buttleplayerParametorMaster);
     }
     public void Execution()
     {
         if (SelectedCommand != null)
         {
-           
+            
             SelectedCommand.Execution();
         }
         else
@@ -33,4 +38,9 @@ public class UICommand : MonoBehaviour
         SelectedCommand = null;
 
     }   
+    public void Initialization()//プレイヤー数値の初期化
+    {
+        _buttleplayerParametorMaster = _playerParametorMaster;
+    }
+
 }

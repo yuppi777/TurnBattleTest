@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class CommandHeal : ICommand
 {
-    private PlayerParametorMaster playerParametorMaster;
+    private PlayerParametorMaster buttlescenePlayerParamator;
     public CommandHeal(PlayerParametorMaster param)
     {
 
-        playerParametorMaster = param;
+        buttlescenePlayerParamator = param;
     }
     public void Execution()
     {
-        playerParametorMaster.HP += 10;
+        buttlescenePlayerParamator.HP += 10;
         Debug.Log("‰ñ•œ");
     }
 }

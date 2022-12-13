@@ -15,6 +15,17 @@ public class CommandAttak : ICommand
     public void Execution()
     {
         Debug.Log("UŒ‚");
-        myEnemy.EnemyHp -= parametorMaster.AttackPower;
+        int attackpoint;
+        attackpoint = parametorMaster.AttackPower - myEnemy.DefensePower;
+
+        if (attackpoint > 0)
+        {
+            myEnemy.EnemyHp -= attackpoint;
+        }
+        else
+        {
+            Debug.Log("ƒvƒŒƒCƒ„[‚ÌUŒ‚—Í‚ª‘Šè‚Ì–hŒä—Í‚ğ‰º‰ñ‚Á‚½");
+        }
+        
     }
 }

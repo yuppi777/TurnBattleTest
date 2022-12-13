@@ -12,6 +12,14 @@ public class MyEnemy : MonoBehaviour
     public int EnemyHp;
     [SerializeField]
     private Text EnemyHpText;
+    [SerializeField]
+    [Header("UŒ‚—Í")]
+    public int AttackPower;//“G‚ÌUŒ‚—Í
+    [SerializeField]
+    [Header("–hŒä—Í")]
+    public int DefensePower;//“G‚Ì–hŒä—Í
+
+
 
     private void Update()
     {
@@ -21,4 +29,10 @@ public class MyEnemy : MonoBehaviour
         }
         EnemyHpText.text = "HP"+ EnemyHp.ToString();
     }
+   private void EnemyAttack()
+    {
+
+    }
+
+
 }

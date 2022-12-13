@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4691e086d520c2a47a320dd4689d6218, type: 3}
-  m_Name: PayerPalaMetor
+  m_Name: ButtleScenePlayerParametor
   m_EditorClassIdentifier: 
   Post: 0
   _hp:
-    value: 90
-  _attackPower: 15
-  _defensePower: 15
+    value: 0
+  _attackPower: 0
+  _defensePower: 0
   _money: 0

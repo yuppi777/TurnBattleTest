@@ -509,6 +509,8 @@ MonoBehaviour:
   _myName: Dolagon
   EnemyHp: 50
   EnemyHpText: {fileID: 1616952497}
+  AttackPower: 8
+  DefensePower: 8
 --- !u!1 &588058153
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,6 +646,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerParametorMaster: {fileID: 11400000, guid: 07974aff7f7dca14299c83c8dcf223cf, type: 2}
+  _buttleplayerParametorMaster: {fileID: 0}
+  _myEnemy: {fileID: 557284483}
 --- !u!1 &600838051
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,6 +1284,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerParametorMaster: {fileID: 11400000, guid: 07974aff7f7dca14299c83c8dcf223cf, type: 2}
+  _buttleplayerParametorMaster: {fileID: 11400000, guid: cff36b914e567ac4aa109d6d796bbeda, type: 2}
+  _myEnemy: {fileID: 557284483}
   SelectCommand: 1
 --- !u!4 &1811846476
 Transform:
