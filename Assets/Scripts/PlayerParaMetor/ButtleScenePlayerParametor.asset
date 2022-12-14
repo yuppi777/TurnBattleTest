@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Post: 0
   _hp:
-    value: 0
+    value: 40
   _attackPower: 0
   _defensePower: 0
   _money: 0

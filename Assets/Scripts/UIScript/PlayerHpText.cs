@@ -7,10 +7,10 @@ using UnityEngine.UI;
 public class PlayerHpText : MonoBehaviour
 {
     [SerializeField] Text PlayerHp;
-    [SerializeField] PlayerParametorMaster playerParametorData;
+    [SerializeField] PlayerParametorMaster buttlesceneplayerparamator;
     void Start()
     {
-        playerParametorData._HP
+        buttlesceneplayerparamator._HP
             .DistinctUntilChanged()
             .Subscribe(x => PlayerHp.text = ("‘Ì—Í")+x.ToString());
     }

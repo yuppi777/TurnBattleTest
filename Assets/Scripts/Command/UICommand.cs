@@ -12,7 +12,8 @@ public class UICommand : MonoBehaviour
     PlayerParametorMaster _buttleplayerParametorMaster;//バトル中のコマンドによって変わるステータス
     [SerializeField]
     MyEnemy _myEnemy;
-    private void Start()
+   
+    private void Awake()
     {
         Initialization();
     }
@@ -28,7 +29,7 @@ public class UICommand : MonoBehaviour
     {
         if (SelectedCommand != null)
         {
-            
+           
             SelectedCommand.Execution();
         }
         else
@@ -38,9 +39,8 @@ public class UICommand : MonoBehaviour
         SelectedCommand = null;
 
     }   
-    public void Initialization()//プレイヤー数値の初期化
+    public void Initialization()//数値の初期化
     {
-        _buttleplayerParametorMaster = _playerParametorMaster;
+        _buttleplayerParametorMaster.HP = _playerParametorMaster.HP;
     }
-
 }
