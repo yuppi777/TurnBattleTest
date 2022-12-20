@@ -10,8 +10,8 @@ public class PlayerParametorMaster : ScriptableObject
 {
     public PlayerParametorMaster.JobPost Post;
     public IReactiveProperty<int> _HP => _hp;
-    public int AttackPower => _attackPower;
-    public int DefensePower => _defensePower;
+    public IReactiveProperty<int> _AttackPower => _attackPower;
+    public IReactiveProperty<int> _DefensePower => _defensePower;
     public int Money => _money;
 
 
@@ -22,10 +22,14 @@ public class PlayerParametorMaster : ScriptableObject
 
     [SerializeField]
     [Header("プレイヤーの攻撃力")]
-    private int _attackPower;
+    ReactiveProperty<int> _attackPower;
+    public int AttackPower {set { _attackPower.Value = value; } get { return _attackPower.Value; } }
+
     [SerializeField]
     [Header("プレイヤーの防御力")]
-    private int _defensePower;
+    ReactiveProperty<int>  _defensePower;
+    public int DefencePower { set { _defensePower.Value = value; }get { return _defensePower.Value; } }
+
     [SerializeField]
     [Header("プレイヤーの所持金")]
     private int _money;

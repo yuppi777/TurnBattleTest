@@ -33,9 +33,9 @@ public class MyEnemy : MonoBehaviour
         }
         EnemyHpText.text = "HP"+ EnemyHp.ToString();
     }
-   private void EnemyAttack()
+   public void EnemyAttack(PlayerParametorMaster buttlesceneparamator)
     {
-
+        buttlesceneparamator.HP -= AttackPower;
     }
 
 

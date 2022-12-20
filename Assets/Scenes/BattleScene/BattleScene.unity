@@ -645,7 +645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1494b4372d016d408a3aa7437ad688d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerParametorMaster: {fileID: 0}
+  _playerParametorMaster: {fileID: 11400000, guid: 07974aff7f7dca14299c83c8dcf223cf, type: 2}
   _buttleplayerParametorMaster: {fileID: 11400000, guid: cff36b914e567ac4aa109d6d796bbeda, type: 2}
   _myEnemy: {fileID: 557284483}
 --- !u!1 &600838051
