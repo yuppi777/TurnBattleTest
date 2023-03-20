@@ -15,6 +15,8 @@ MonoBehaviour:
   Post: 0
   _hp:
     value: 10
-  _attackPower: 20
-  _defensePower: 15
+  _attackPower:
+    value: 15
+  _defensePower:
+    value: 15
   _money: 0
